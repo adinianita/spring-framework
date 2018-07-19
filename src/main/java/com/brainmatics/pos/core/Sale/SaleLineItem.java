@@ -1,15 +1,22 @@
-package com.brainmatics.pos.core;
+package com.brainmatics.pos.core.Sale;
 
+import com.brainmatics.pos.core.Product.Product;
+
+import javax.persistence.Embeddable;
+import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
+@Embeddable
 public class SaleLineItem {
     private int quantitiy;
     private BigDecimal unitPrice;
+
+    @ManyToOne
     private Product product;
     private ArrayList<Product> products;
 
-    public int getQuantitiy(int i) {
+    public int getQuantitiy() {
         return quantitiy;
     }
 
@@ -25,7 +32,7 @@ public class SaleLineItem {
         this.unitPrice = unitPrice;
     }
 
-    public Product getProduct(Product p1) {
+    public Product getProduct() {
         return product;
     }
 
@@ -44,4 +51,6 @@ public class SaleLineItem {
 
         return unitPrice.multiply(BigDecimal.valueOf(quantitiy));
     }
+
+
 }

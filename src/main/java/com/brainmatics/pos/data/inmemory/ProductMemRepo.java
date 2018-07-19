@@ -1,12 +1,12 @@
-package com.brainmatics.pos.infra.data.inmemory;
+package com.brainmatics.pos.data.inmemory;
 
-import com.brainmatics.pos.core.Product;
-import com.brainmatics.pos.core.ProductRepo;
+import com.brainmatics.pos.core.Product.Product;
+import com.brainmatics.pos.core.Product.ProductRepoNonSpring;
 
 import java.util.ArrayList;
 
 
-public class ProductMemRepo implements ProductRepo {
+public class ProductMemRepo implements ProductRepoNonSpring {
 
     private static ArrayList<Product> data = new ArrayList<>();
 

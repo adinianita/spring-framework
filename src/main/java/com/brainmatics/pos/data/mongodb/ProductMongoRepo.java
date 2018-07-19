@@ -1,13 +1,13 @@
-package com.brainmatics.pos.infra.data.mongodb;
+package com.brainmatics.pos.data.mongodb;
 
-import com.brainmatics.pos.core.Product;
-import com.brainmatics.pos.core.ProductRepo;
+import com.brainmatics.pos.core.Product.ProductRepoNonSpring;
+import com.brainmatics.pos.core.Product.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
 @Repository
-public class ProductMongoRepo implements ProductRepo {
+public class ProductMongoRepo implements ProductRepoNonSpring {
 
     private static ArrayList<Product> data = new ArrayList<>();
 

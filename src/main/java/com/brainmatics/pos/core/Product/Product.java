@@ -1,9 +1,15 @@
-package com.brainmatics.pos.core;
+package com.brainmatics.pos.core.Product;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
+@Entity
 public class Product {
+
+    @Id
     private int id;
+
     private String ccde;
     private String name;
     private BigDecimal price;

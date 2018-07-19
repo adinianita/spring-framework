@@ -1,12 +1,12 @@
-package com.brainmatics.pos.core;
+package com.brainmatics.pos.core.Product;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class ProductServices {
-    private ProductRepo repository;
+    private ProductRepoNonSpring repository;
 
-    public ProductServices(ProductRepo repository){
+    public ProductServices(ProductRepoNonSpring repository){
         this.repository = repository;
     }
 

@@ -1,14 +1,29 @@
-package com.brainmatics.pos.core;
+package com.brainmatics.pos.core.Sale;
 
+import com.brainmatics.pos.core.Employee.Employee;
+import com.brainmatics.pos.core.Product.Product;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
+@Entity
 public class Sale {
+
+    @Id
     private int id;
     private LocalDateTime time;
+
+    @ManyToOne
     private Employee cashier;
-    private ArrayList<SaleLineItem> lineItems;
+
+    @ElementCollection
+    private List<SaleLineItem> lineItems;
 
     public int getId() {
         return id;
@@ -34,9 +49,9 @@ public class Sale {
         this.cashier = cashier;
     }
 
-//    public ArrayList<SaleLineItem> getLineItems() {
-//        return lineItems();
-//    }
+    public List<SaleLineItem> getLineItems() {
+        return lineItems;
+    }
 
 
 
@@ -62,4 +77,8 @@ public class Sale {
             total = total.add(sli.getSubTotal());
         return total;
     }
+
+
+
+
 }

@@ -1,6 +1,6 @@
-package com.brainmatics.pos;
+package com.brainmatics;
 
-import com.brainmatics.pos.core.Employee;
+import com.brainmatics.pos.core.Employee.Employee;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
