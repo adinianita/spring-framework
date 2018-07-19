@@ -1,4 +1,4 @@
-package com.brainmatics.pos.data.jdbc;
+package com.brainmatics.pos.infra.data.jdbc;
 
 import com.brainmatics.pos.core.Employee.Employee;
 import com.brainmatics.pos.core.Product.Product;

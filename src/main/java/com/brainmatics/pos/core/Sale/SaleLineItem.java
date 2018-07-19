@@ -5,7 +5,6 @@ import com.brainmatics.pos.core.Product.Product;
 import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 
 @Embeddable
 public class SaleLineItem {
@@ -14,7 +13,6 @@ public class SaleLineItem {
 
     @ManyToOne
     private Product product;
-    private ArrayList<Product> products;
 
     public int getQuantitiy() {
         return quantitiy;
@@ -46,6 +44,8 @@ public class SaleLineItem {
         setQuantitiy(quantitiy);
         setUnitPrice(product.getPrice());
     }
+
+    public SaleLineItem(){ }
 
     public BigDecimal getSubTotal(){
 

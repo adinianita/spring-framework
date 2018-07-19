@@ -1,4 +1,4 @@
-package com.brainmatics.pos.data.inmemory;
+package com.brainmatics.pos.infra.data.inmemory;
 
 import com.brainmatics.pos.core.Product.Product;
 import com.brainmatics.pos.core.Product.ProductRepoNonSpring;

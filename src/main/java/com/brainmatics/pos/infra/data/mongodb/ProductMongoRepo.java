@@ -1,4 +1,4 @@
-package com.brainmatics.pos.data.mongodb;
+package com.brainmatics.pos.infra.data.mongodb;
 
 import com.brainmatics.pos.core.Product.ProductRepoNonSpring;
 import com.brainmatics.pos.core.Product.Product;
